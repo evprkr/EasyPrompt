@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+EasyPrompt/__init__.py
+EasyPrompt/main.py
+EasyPrompt.egg-info/PKG-INFO
+EasyPrompt.egg-info/SOURCES.txt
+EasyPrompt.egg-info/dependency_links.txt
+EasyPrompt.egg-info/top_level.txt

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: EasyPrompt
+Version: 0.1.6
+Summary: A simple prompt-style input library
+Home-page: https://github.com/evprkr/EasyPrompt
+Author: Evan Parker
+Author-email: evanjparker@outlook.com
+License: UNKNOWN
+Description: # EasyPrompt
+        Simple module for taking and parsing commands from the user in a prompt-style interface
+        
+        ### Installation
+        
+            pip install easyprompt
+        
+Keywords: command,input,prompt,easy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
