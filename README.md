@@ -13,11 +13,11 @@ Then just import it as you normally would
 ### Usage
 First, you have to set up the main Commander class.
 
-	CommanderName = EasyPrompt.Commander() # Optional: set the 'prompt' value to have a custom prompt such as '$ '
+	CommanderName = EasyPrompt.Commander()
 
 After that, all you have to do is add commands to the prompt...
 
-	CommanderName.add_command('hello', hello_func) # Optional: set 'args' to however many arguments you want to accept
+	CommanderName.add_command('hello', hello_func)
 
 Then start the prompt!
 
