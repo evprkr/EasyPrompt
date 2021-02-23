@@ -38,7 +38,7 @@ Arguments for commands can be ints, floats, strings, whatever. EasyPrompt treats
 When accepting multiple words as one argument, the user will have to put their string in quotations in order to use spaces, otherwise each word will be treated as its own argument. Example: ``Hello world!`` counts as two arguments whereas ``"Hello world!"`` counts as one.
 
 ### Simple Example Program
-This program will prompt the user for two numbers, add them together, and print the result. It also an ``exit`` command for stopping the script cleanly.
+This program will prompt the user for two numbers, add them together, and print the result. It also has an ``exit`` command for stopping the script cleanly.
 
 	import EasyPrompt
 	import sys
