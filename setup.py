@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
      name='EasyPrompt',  
-     version='0.1.7',
+     version='0.2.1',
      author="Evan Parker",
      author_email="evanjparker@outlook.com",
      description="A simple prompt-style input library",

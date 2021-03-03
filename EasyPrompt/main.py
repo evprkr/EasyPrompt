@@ -1,18 +1,18 @@
-# EasyPrompt v0.1.8
+# EasyPrompt Commander
 # by Evan Parker (@evprkr)
 # https://github.com/evprkr/EasyPrompt
 
 # Features to add
 # * Specify allowed argument types for commands, special error for "expected string, got integer"
-# * 'get_selection' function for displaying a list of options and taking input to trigger specific callbacks
+# * Maybe make 'get_input' return something different if there's an error
+# * help method for making a nice looking help command easily
 
 # Known bugs
-# * 'get_input' always returns 'None', should fix it to return the return value of the callback function
 # * Entering a blank command does the big kill
 
 import inspect, shlex
 
-# Main Commander Class
+# Commander Class
 class Commander:
 	def __init__(self, prompt=None, newline=True, commands=None, previous_cmd=None):
 		if prompt == None: self.prompt = '> '
@@ -36,6 +36,8 @@ class Commander:
 			self.parse_command(cmd_input)
 
 	def parse_command(self, cmd_input):
+		global returned
+		returned = []
 		self.previous_cmd = cmd_input
 		input_split = shlex.split(cmd_input)
 
@@ -58,8 +60,9 @@ class Commander:
 					if self.newline == True: print('')
 					return
 
-				callback()
+				return_val = callback()
 				if self.newline == True: print('')
+				returned = [cmd_input, return_val]
 				return
 		else:
 			print(f"Command not found: '{input_split[0]}'")
@@ -68,12 +71,3 @@ class Commander:
 	def add_command(self, trigger, callback, args=None):
 	   command = [trigger, callback, args]
 	   self.commands.append(command)
-
-# testing
-def dongus(): print('dongus')
-
-prompt = Commander(newline=False)
-prompt.add_command('dingus', dongus)
-
-while True:
-	prompt.get_input()
